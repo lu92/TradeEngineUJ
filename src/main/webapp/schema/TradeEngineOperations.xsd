@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 4 sp1 (http://www.altova.com) by SG0222895 (SABRE GLBL INC) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://operations.ws_bindings.tradeengine.tradeengineproject.com" targetNamespace="http://operations.ws_bindings.tradeengine.tradeengineproject.com" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="CreateProductRequest">
+		<xs:annotation>
+			<xs:documentation>invoking when we want to create a new Product</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="commercialName" type="xs:string"/>
+				<xs:element name="price" type="xs:double"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateProductResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="response" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

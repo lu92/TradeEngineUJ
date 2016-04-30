@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 4 sp1 (http://www.altova.com) by SG0222895 (SABRE GLBL INC) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://operations.ws_bindings.profilereader.tradeengineproject.com" xmlns:xsd="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TradeEngine="http://ws_bindings.tradeengine.tradeengineproject.com" targetNamespace="http://operations.ws_bindings.profilereader.tradeengineproject.com" elementFormDefault="qualified" attributeFormDefault="unqualified" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<xs:import namespace="http://ws_bindings.tradeengine.tradeengineproject.com" schemaLocation="TradeEngine.xsd"/>
+	<!--<xs:element name="CreateCustomerRequest">-->
+		<!--<xs:complexType>-->
+			<!--<xs:sequence>-->
+				<!--<xs:element name="customer" type="TradeEngine:Customer"/>-->
+			<!--</xs:sequence>-->
+		<!--</xs:complexType>-->
+	<!--</xs:element>-->
+	<!--<xs:element name="CreateCustomerResponse">-->
+		<!--<xs:complexType>-->
+			<!--<xs:sequence>-->
+				<!--<xs:element name="Result" type="TradeEngine:Result"/>-->
+			<!--</xs:sequence>-->
+		<!--</xs:complexType>-->
+	<!--</xs:element>-->
+	<xs:element name="CreateLoyalityAccountRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="loyalityAccount" type="TradeEngine:LoyalityAccount"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateLoyalityAccountResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Result" type="TradeEngine:Result"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetLoyalityAccountRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="loyalityAccountId" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetLoyalityAccountResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="LoyalityAccount" type="TradeEngine:LoyalityAccount"/>
+				<xs:element name="Result" type="TradeEngine:Result"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteLoyalityAccountRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="loyalityAccountId" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteLoyalityAccountResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Result" type="TradeEngine:Result"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

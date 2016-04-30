@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 4 sp1 (http://www.altova.com) by SG0222895 (SABRE GLBL INC) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://ws_bindings.tradeengine.tradeengineproject.com" targetNamespace="http://ws_bindings.tradeengine.tradeengineproject.com" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Product">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Id" type="xs:long" minOccurs="0"/>
+				<xs:element name="commercialName" type="xs:string"/>
+				<xs:element name="price" type="xs:double"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--<xs:element name="Address" type="AddressType"/>-->
+	<xs:complexType name="Address">
+		<xs:sequence>
+			<xs:element name="street" type="xs:string"/>
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="zipCode" type="xs:string"/>
+			<xs:element name="coutry" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--<xs:element name="Customer" type="CustomerType"/>-->
+	<xs:complexType name="Customer">
+		<xs:sequence>
+			<xs:element name="firstname" type="xs:string"/>
+			<xs:element name="lastname" type="xs:string"/>
+			<xs:element name="birthday" type="xs:date"/>
+			<xs:element name="email" type="xs:string"/>
+			<xs:element name="address" type="Address"/>
+			<xs:element name="creditCard" type="CreditCard"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:long"/>
+	</xs:complexType>
+	<xs:complexType name="Result">
+		<xs:sequence>
+			<xs:element name="Message" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CreditCard">
+		<xs:sequence>
+			<xs:element name="number" type="xs:string"/>
+			<xs:element name="currency" type="xs:string"/>
+			<xs:element name="balance" type="xs:double"/>
+		</xs:sequence>
+		<xs:attribute name="creditCardId" type="xs:long"/>
+	</xs:complexType>
+	<xs:complexType name="LoyalityAccount">
+			<xs:sequence>
+				<xs:element name="customer" type="Customer"/>
+				<xs:element name="points" type="xs:long" minOccurs="0"/>
+				<xs:element name="creationDate" type="xs:date" minOccurs="0"/>
+				<xs:element name="tierLevel" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+	</xs:complexType>
+</xs:schema>
